@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      -  debasish-vol:/app
+  nginx2:
+    image: nginx:latest
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      -  debasish-vol1:/app    
+volumes:
+  debasish-vol:  
+    external: true
+  debasish-vol1:  
